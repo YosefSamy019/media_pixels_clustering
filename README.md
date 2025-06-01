@@ -12,7 +12,6 @@ The result is a simplified version of the media with a reduced number of colors,
 ## 🚀 Live Demo
 
 🔗 [Try it out here](https://mediapixelsclustering-b2v2zjkch8vyaysyw4g7ew.streamlit.app/)  
-*(Replace this link with your actual deployed Streamlit app link)*
 
 ---
 
