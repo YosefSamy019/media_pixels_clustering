@@ -3,7 +3,11 @@
 This Streamlit web app allows users to upload **images** or **videos** and apply **KMeans clustering** to their pixels.  
 The result is a simplified version of the media with a reduced number of colors, which can be used for **compression**, **stylization**, or **data analysis**.
 
-![Sample Image](assets/sample_result.png) <!-- Replace this with your actual image path -->
+![Sample Image](live/live(1).png) 
+![Sample Image](live/live(2).png) 
+![Sample Image](live/live(3).png) 
+![Sample Image](live/live(4).png) 
+![Sample Image](live/live(5).png) 
 
 ## 🚀 Live Demo
 
