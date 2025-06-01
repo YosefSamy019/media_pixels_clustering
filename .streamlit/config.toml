@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+primaryColor="#D4A373"              # Warm sand tone for highlights and buttons
+backgroundColor="#1C1C1C"           # Deep charcoal background
+secondaryBackgroundColor="#2C2C2C"  # Slightly lighter for panels and widgets
+textColor="#F5E9DA"                 # Soft beige text for high contrast without harshness
+font="serif"                        # Elegant and classic look
