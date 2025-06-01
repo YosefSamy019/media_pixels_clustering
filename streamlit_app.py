@@ -1,5 +1,4 @@
 import tempfile
-
 import cv2 as cv
 import numpy as np
 import streamlit as st
@@ -56,7 +55,7 @@ def main():
         SELECT_CLUSTER_NO = kmeans_cols[0].number_input("Enter clusters number:", max_value=100, min_value=1,
                                                         value=SELECT_CLUSTER_NO,
                                                         disabled=SELECT_MODEL != CONST_KMEANS)
-        SELECT_RANDOM_STATE = kmeans_cols[1].number_input("Random Sate:", max_value=100, min_value=1,
+        SELECT_RANDOM_STATE = kmeans_cols[1].number_input("Random State:", max_value=100, min_value=1,
                                                           value=SELECT_RANDOM_STATE,
                                                           disabled=SELECT_MODEL != CONST_KMEANS)
 
@@ -97,6 +96,7 @@ def build_video_tab():
         tfile = tempfile.NamedTemporaryFile(delete=False)
         tfile.write(uploaded_file.read())
         temp_path = tfile.name
+        tfile.close()
 
         convert_btn = st.button("Convert video")
 
@@ -108,7 +108,10 @@ def build_video_tab():
         videos_cols[0].video(uploaded_file)
 
         if convert_btn:
-            output_video_path = "output_video.mp4"
+            # Use a temporary file for the output video
+            tmp_outfile = tempfile.NamedTemporaryFile(suffix=".mp4", delete=False)
+            output_video_path = tmp_outfile.name
+            tmp_outfile.close()
 
             cap = cv.VideoCapture(temp_path)
             if not cap.isOpened():
